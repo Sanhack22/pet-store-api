@@ -14,8 +14,31 @@ export class AuthRoutes {
       const controller = new AuthController(AuthRepository); // 2 // 8 actulizacion
   
         // Definir todas mis rutas especificas
-        router.post('/login', controller.loginUser) // 3
+
+
+router.post('/login', controller.loginUser) // 3
+
         router.post('/register', controller.registerUser) // 4
+        /**
+ * @openapi
+ * /api/auth/register:
+ *   post:
+ *     tags:
+ *       - users
+ *     summary: "Registro de Usuarios"
+ *     description: "Este es un endPoint para registrar usuarios"
+ *     requestBody:
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/userSchema'
+ *     responses:
+ *       '200':
+ *         description: "Retorna el objeto de la colección"
+ *       '422':
+ *         description: "Error con los datos"
+ *    
+ */
   
   
         return router;

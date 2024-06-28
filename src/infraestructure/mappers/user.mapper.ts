@@ -1,10 +1,6 @@
-/* La línea `import { CustomError, UserEntity } from "../../domain";` está importando las clases
-`CustomError` y `UserEntity` desde un archivo o módulo ubicado en el directorio `domain`. Luego,
-estas clases se utilizan dentro de la clase `UserMapper` para manejar errores y crear instancias de
-`UserEntity`. */
+
 import { CustomError, UserEntity } from "../../domain";
 
-/* Esta clase es una clase UserMapper escrita en TypeScript. */
 export class UserMapper {
   /**
    * La función `userEntityFromObject` convierte un objeto en una instancia de UserEntity y realiza
